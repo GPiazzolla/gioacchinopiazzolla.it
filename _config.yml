@@ -1,0 +1,5 @@
+compress_html:
+  clobber: true
+  cache_ttl: 2592000
+include:
+  - sitemap.xml
