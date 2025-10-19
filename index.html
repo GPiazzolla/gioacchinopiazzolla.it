@@ -604,17 +604,13 @@
     letter-spacing: 1px;
     
     /* EFFETTO DIGITAZIONE */
-    display: block;             /* Necessario per animare la larghezza */
-    overflow: hidden;           /* Nasconde il testo fuori larghezza */
-    white-space: nowrap;        /* Mantiene il testo su una singola riga */
-    width: 0;                   /* Inizia con larghezza zero (testo invisibile) */
-    
-    /* FORZA L'ESPANSIONE DEL TESTO DA SINISTRA ALL'INTERNO DEL BLOCCO H2 */
-    text-align: left; 
-    
-    /* 42 è il numero di caratteri nella dicitura "20 ANNI DI SERVIZI E SOLUZIONI LOGISTICHE" */
+    overflow: hidden;         /* Nasconde il testo che è fuori da "width" */
+    border-right: none;       /* Rimuove il cursore verticale */
+    white-space: nowrap;      /* Mantiene il testo su una singola riga */
+    width: 0;                 /* Inizia con larghezza zero */
+    /* 42 è il numero di caratteri nella dicitura */
     animation: 
-        typing 4.0s steps(42, end) forwards; 
+        typing 3.5s steps(42, end) forwards; 
 }
 
 /* KEYFRAMES PER L'ANIMAZIONE DI DIGITAZIONE */
