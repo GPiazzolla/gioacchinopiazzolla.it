@@ -600,21 +600,21 @@
     font-size: 21px;
     font-weight: bold;
     color: #3e3f41;
-    margin: 8px 0 15px 0; /* Manteniamo i margini originali */
+    margin: 8px 0 15px 0;
     letter-spacing: 1px;
     
-    /* MODIFICA CHIAVE 1: Tratta l'h2 come un blocco che sta sulla stessa linea */
-    display: inline-block; 
-    
     /* EFFETTO DIGITAZIONE */
-    overflow: hidden;         /* Nasconde il testo fuori larghezza */
-    white-space: nowrap;      /* Mantiene il testo su una singola riga */
-    width: 0;                 /* Inizia con larghezza zero */
-    /* 42 è il numero di caratteri */
-    animation: 
-        typing 3.0s steps(42, end) forwards; 
+    display: block;             /* Necessario per animare la larghezza */
+    overflow: hidden;           /* Nasconde il testo fuori larghezza */
+    white-space: nowrap;        /* Mantiene il testo su una singola riga */
+    width: 0;                   /* Inizia con larghezza zero (testo invisibile) */
     
-    /* MODIFICA CHIAVE 2: Rimuoviamo il text-align: left, perché non serve più */
+    /* FORZA L'ESPANSIONE DEL TESTO DA SINISTRA ALL'INTERNO DEL BLOCCO H2 */
+    text-align: left; 
+    
+    /* 42 è il numero di caratteri nella dicitura "20 ANNI DI SERVIZI E SOLUZIONI LOGISTICHE" */
+    animation: 
+        typing 4.0s steps(42, end) forwards; 
 }
 
 /* KEYFRAMES PER L'ANIMAZIONE DI DIGITAZIONE */
